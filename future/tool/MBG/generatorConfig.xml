@@ -12,7 +12,7 @@
 		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
 	  
 	    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-	        connectionURL="jdbc:mysql://localhost:3306/juzhai"
+	        connectionURL="jdbc:mysql://localhost:3306/future"
 	        userId="root"
 	        password="111111">
 	    </jdbcConnection>
@@ -21,7 +21,7 @@
 	      <property name="forceBigDecimals" value="false" />
 	    </javaTypeResolver>
 	
-	    <javaModelGenerator targetPackage="com.juzhai.passport.model" targetProject="src/main/java">
+	    <javaModelGenerator targetPackage="com.juzhai.future.passport.model" targetProject="src/main/java">
 	      <property name="enableSubPackages" value="false" />
 	      <property name="trimStrings" value="true" />
 	    </javaModelGenerator>
@@ -30,50 +30,9 @@
 	      <property name="enableSubPackages" value="false" />
 	    </sqlMapGenerator>
 	
-	    <javaClientGenerator type="XMLMAPPER" targetPackage="com.juzhai.passport.mapper"  targetProject="src/main/java">
+	    <javaClientGenerator type="XMLMAPPER" targetPackage="com.juzhai.future.passport.mapper"  targetProject="src/main/java">
 	      <property name="enableSubPackages" value="false" />
 	    </javaClientGenerator>
-	        	<!-- 
-	    <table tableName="tb_profile" domainObjectName="Profile" >
-	      <property name="useActualColumnNames" value="false"/>
-	      <columnOverride column="sub_email" javaType="java.lang.Boolean" jdbcType="TINYINT" />
-	      <columnOverride column="has_modify_nickname" javaType="java.lang.Boolean" jdbcType="TINYINT" />
-	      <columnOverride column="has_modify_gender" javaType="java.lang.Boolean" jdbcType="TINYINT" />
-	      <columnOverride column="birth_secret" javaType="java.lang.Boolean" jdbcType="TINYINT" />
-	    </table>
-	
-	    
-	    <table tableName="tb_m_profile" domainObjectName="MProfile" >
-	      <property name="useActualColumnNames" value="false"/>
-	      <columnOverride column="location_secret" javaType="java.lang.Boolean" jdbcType="TINYINT" />
-	      <columnOverride column="phone_secret" javaType="java.lang.Boolean" jdbcType="TINYINT" />
-	      <columnOverride column="synchronize_secret" javaType="java.lang.Boolean" jdbcType="TINYINT" />
-	      <columnOverride column="social_secret" javaType="java.lang.Boolean" jdbcType="TINYINT" />
-	    </table>
-	    -->
-	    <table tableName="tb_mobile_device" domainObjectName="MobileDevice" >
-	      <property name="useActualColumnNames" value="false"/>
-	    </table>
-    	<!-- 
-	    <table tableName="tb_report" domainObjectName="Report" >
-	      <property name="useActualColumnNames" value="false"/>
-	    </table>
-	    
-	    <table tableName="tb_login_log" domainObjectName="LoginLog" >
-	      <property name="useActualColumnNames" value="false"/>
-	      <columnOverride column="auto_login" javaType="java.lang.Boolean" jdbcType="TINYINT" />
-	    </table>
-	    
-	    <table tableName="tb_preference" domainObjectName="Preference" >
-	      <property name="useActualColumnNames" value="false"/>
-	      <columnOverride column="defunct" javaType="java.lang.Boolean" jdbcType="TINYINT" />
-	      <columnOverride column="open" javaType="java.lang.Boolean" jdbcType="TINYINT" />
-	    </table>
-	    
-	    <table tableName="tb_user_preference" domainObjectName="UserPreference" >
-	      <property name="useActualColumnNames" value="false"/>
-	      <columnOverride column="open" javaType="java.lang.Boolean" jdbcType="TINYINT" />
-	    </table>
 	    
 		<table tableName="tb_passport" domainObjectName="Passport" >
 	      <property name="useActualColumnNames" value="false"/>
@@ -82,13 +41,13 @@
 	      <columnOverride column="admin" javaType="java.lang.Boolean" jdbcType="TINYINT" />
 	    </table>
 	    
-	    <table tableName="tb_profession" domainObjectName="Profession">
+	    <!-- <table tableName="tb_profession" domainObjectName="Profession">
 	      <property name="useActualColumnNames" value="false"/>
 	    </table>
 	    
 	    <table tableName="tb_constellation" domainObjectName="Constellation">
 	      <property name="useActualColumnNames" value="false"/>
-	    </table>
+	    </table> -->
 	    
 	    <table tableName="tb_thirdparty" domainObjectName="Thirdparty">
 	      <property name="useActualColumnNames" value="false"/>
@@ -96,18 +55,13 @@
 	    
 	    <table tableName="tb_tp_user" domainObjectName="TpUser">
 	      <property name="useActualColumnNames" value="false"/>
-	    </table>
-	    
-	    <table tableName="tb_tp_user_auth" domainObjectName="TpUserAuth">
-	      <property name="useActualColumnNames" value="false"/>
 	      <generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true" type="post"/>
 	    </table>
 	    
-		<table tableName="tb_user_guide" domainObjectName="UserGuide" >
+		<!-- <table tableName="tb_user_guide" domainObjectName="UserGuide" >
 	      <property name="useActualColumnNames" value="false"/>
 	      <columnOverride column="complete" javaType="java.lang.Boolean" jdbcType="TINYINT" />
-		</table> 
-		 -->
+		</table> -->
 	</context>
 	 <!--    	
 	<context id="common" targetRuntime="MyBatis3">
